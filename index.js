@@ -124,12 +124,13 @@ function refreshKorvContainer(){
     lopphindElement.innerText = `Lõppuhind: `; // #2
 }
 function kustutaKorvist(productId){
-    korv.forEach(product => {
-        if(product.productId === productId){
-            // ... #1
+    // #1
+    for (let i = 0; i < korv.length; i++) {
+        if (korv[i].productId === productId) {
+            korv.splice(i, 1);
+            break;
         }
-    })
-
+    }
     refreshKorvContainer();
 }
 function ghoulMode(){
