@@ -44,6 +44,7 @@ const products = [
         price: 1000.7,
         image: "https://i1.sndcdn.com/artworks-AXzi8OM45xXOyhC2-VJXZSQ-t500x500.jpg"
     },
+    // #4
 ]
 const korv = []
 
@@ -120,14 +121,24 @@ function refreshKorvContainer(){
 
         productsKorvasContainer.appendChild(productContainerKorvas);
     })
-    lopphindElement.innerText = `Lõppuhind: `; // #1
+    lopphindElement.innerText = `Lõppuhind: `; // #2
 }
 function kustutaKorvist(productId){
     korv.forEach(product => {
         if(product.productId === productId){
-            // ... #2
+            // ... #1
         }
     })
 
     refreshKorvContainer();
 }
+function ghoulMode(){
+    const ul = document.getElementsByTagName("ghoul-mode");
+    let sum = 1000;
+    const minus = 7;
+    while(sum > 0){
+        sum -= minus;
+        
+    }
+}
+ghoulMode();
