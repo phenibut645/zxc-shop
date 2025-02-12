@@ -69,3 +69,14 @@ body{
     margin-left: 20px;
     height:20%
 }
+.product-container{
+    display:flex;
+    flex-direction: column;
+    padding: 50px;
+    width:fit-content;
+    background-color: #FF6347;
+    border-radius: 5%;
+    color: white;
+    text-align: center;
+}
+
