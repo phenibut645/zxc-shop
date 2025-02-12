@@ -44,6 +44,12 @@ const products = [
         price: 1000.7,
         image: "https://i1.sndcdn.com/artworks-AXzi8OM45xXOyhC2-VJXZSQ-t500x500.jpg"
     },
+    {
+        name: "Ghoul Dead Inside 1000-7",
+        price: 1000.7,
+        image: "https://i.pinimg.com/originals/1c/33/89/1c3389732b67f6b07f984ab2a1981f2d.jpg" // Изображение с Google
+    },
+
     // #4
 ]
 const korv = []
