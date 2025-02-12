@@ -7,3 +7,4 @@ Teine ülesanne - Funktsioonis "`refreshKorvContainer`" tuleb täiendada `"lophi
 Kolmas ülesanne on vahetada poes tootekaartide taust oma mitte kõige lemmikuma värviga.
 # 🎰 Neljas ülesanne.
 Neljas ülesanne - Lisa toode poodi hinnaga 1000.7 ja kaardi pilt tuleb võtta googlist päringuga "ghoul dead inside 1000-7 dota 2"
+# 🐹 Viies ülesanne
