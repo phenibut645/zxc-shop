@@ -123,10 +123,9 @@ function refreshKorvContainer(){
     lopphindElement.innerText = `Lõppuhind: `; // #1
 }
 function kustutaKorvist(productId){
-    // ... #2
     korv.forEach(product => {
         if(product.productId === productId){
-
+            // ... #2
         }
     })
 
