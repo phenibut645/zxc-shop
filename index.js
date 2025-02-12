@@ -133,7 +133,7 @@ function kustutaKorvist(productId){
     refreshKorvContainer();
 }
 function ghoulMode(){
-    const ul = document.getElementsByTagName("ghoul-mode");
+    const ul = document.getElementById("ghoul-mode");
     let sum = 1000;
     const minus = 7;
     while(sum > 0){
