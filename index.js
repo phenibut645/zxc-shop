@@ -132,13 +132,12 @@ function refreshKorvContainer(){
     lopphindElement.innerText = `Lõppuhind: ${totalPrice.toFixed(2)}$`;
 }
 function kustutaKorvist(productId){
-    // #1
-    for (let i = 0; i < korv.length; i++) {
-        if (korv[i].productId === productId) {
-            korv.splice(i, 1);
-            break;
+    korv.forEach((product, index) => {
+        if(product.productId === productId){
+            korv.splice(index, 1);
         }
-    }
+    })
+
     refreshKorvContainer();
 }
 function ghoulMode(){
@@ -146,8 +145,10 @@ function ghoulMode(){
     let sum = 1000;
     const minus = 7;
     while(sum > 0){
+        const li=document.createElement('li');
+        li.innerText=sum;
+        ul.appendChild(li);
         sum -= minus;
-        
     }
 }
 ghoulMode();
