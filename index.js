@@ -138,7 +138,20 @@ function ghoulMode(){
     const minus = 7;
     while(sum > 0){
         sum -= minus;
-        
+
     }
 }
+
+function kustutaKorvist(productId){
+    korv.forEach((product, index) => {
+        if(product.productId === productId){
+            korv.splice(index, 1); // Удаляет продукт из корзины
+        }
+    })
+
+    refreshKorvContainer();
+}
+
 ghoulMode();
+
+
