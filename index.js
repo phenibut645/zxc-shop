@@ -151,4 +151,5 @@ function ghoulMode(){
         sum -= minus;
     }
 }
+
 ghoulMode();
