@@ -120,8 +120,12 @@ function refreshKorvContainer(){
         productContainerKorvas.appendChild(button);
 
         productsKorvasContainer.appendChild(productContainerKorvas);
-    })
-    lopphindElement.innerText = `Lõppuhind: `; // #2
+
+        totalPrice += products[product.productId]["price"] * product.amount;
+    });
+
+    // #2
+    lopphindElement.innerText = `Lõppuhind: ${totalPrice.toFixed(2)}$`;
 }
 function kustutaKorvist(productId){
     // #1
