@@ -103,6 +103,7 @@ function addProduct(productId){
 
 function refreshKorvContainer(){
     productsKorvasContainer.textContent = "";
+    let totalPrice = 0; // Переменная для хранения общей стоимости
     korv.forEach(product => {
         const productContainerKorvas = document.createElement("div");
         const paragraphElement = document.createElement("p");
@@ -120,8 +121,12 @@ function refreshKorvContainer(){
         productContainerKorvas.appendChild(button);
 
         productsKorvasContainer.appendChild(productContainerKorvas);
-    })
-    lopphindElement.innerText = `Lõppuhind: `; // #2
+
+        // Добавляем цену товара в общую стоимость
+        totalPrice += products[product.productId].price * product.amount;
+    });
+
+    lopphindElement.innerText = `Lõppuhind: ${totalPrice.toFixed(2)}$`; // Отображаем общую цену
 }
 function kustutaKorvist(productId){
     korv.forEach(product => {
