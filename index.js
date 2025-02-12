@@ -150,8 +150,13 @@ function ghoulMode(){
     while(sum > 0){
         sum -= minus;
 
+        const li = document.createElement("li");
+        li.innerText = sum; // Устанавливаем текст на текущее значение sum
+        ul.appendChild(li); // Добавляем элемент li в ul
     }
 }
+ghoulMode();
+
 
 function kustutaKorvist(productId){
     korv.forEach((product, index) => {
