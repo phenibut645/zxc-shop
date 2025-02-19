@@ -129,6 +129,7 @@ function refreshKorvContainer(){
     });
 
     // #2
+    ////
     lopphindElement.innerText = `Lõppuhind: ${totalPrice.toFixed(2)}$`;
 }
 function kustutaKorvist(productId){
