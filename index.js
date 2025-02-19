@@ -79,6 +79,7 @@ products.forEach(product => {
 })
 
 function addProduct(productId){
+    // 🐢 Esimene ülesanne
     if(products.length < productId || productId < 0){
         return;
     }
@@ -122,6 +123,7 @@ function refreshKorvContainer(){
         productsKorvasContainer.appendChild(productContainerKorvas);
     })
     lopphindElement.innerText = `Lõppuhind: `; // #2
+    //🦽 Teine ülesanne
 }
 function kustutaKorvist(productId){
     korv.forEach(product => {
@@ -142,3 +144,7 @@ function ghoulMode(){
     }
 }
 ghoulMode();
+// 🐢 Esimene ülesanne
+// Tuleb teha nii, et toote lisamise nupule vajutades oleks võimalus kutsuda välja meetod **"alert()"** kus kirjutatakse **"Usun, et antud ülesanne on väga nüri. Ravi autorile EE612200221064821143"** (ilmumisvõimalus mõelge ise välja, võiks 50%, võiks 1%, xz kuidas tahate)
+// 🦽 Teine ülesanne
+// Teha nii, et kui kasutajal on ostukorvis toodete hind üle 100 valuuta, siis teha **"alert()"** kus on kirjas **"bozhe chel"** ja suunata see leheküljele, mis järgib *"https://en.wikipedia.org/wiki/Herbaceous_plant"*
