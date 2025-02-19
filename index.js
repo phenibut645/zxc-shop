@@ -105,8 +105,10 @@ function addProduct(productId){
     refreshKorvContainer();
 }
 
-function refreshKorvContainer(){
+function refreshKorvContainer() {
     productsKorvasContainer.textContent = "";
+    let totalPrice = 0;
+
     korv.forEach(product => {
         const productContainerKorvas = document.createElement("div");
         const paragraphElement = document.createElement("p");
@@ -114,43 +116,65 @@ function refreshKorvContainer(){
 
         productContainerKorvas.classList.add("product-korvas-container");
 
+
         paragraphElement.innerText = `${products[product.productId]["name"]} -> ${product.amount}`;
         productContainerKorvas.appendChild(paragraphElement);
 
+
         button.innerText = "Kustuta";
-        button.addEventListener("click", (e)=>{
+        button.addEventListener("click", (e) => {
             kustutaKorvist(product.productId);
         });
         productContainerKorvas.appendChild(button);
 
         productsKorvasContainer.appendChild(productContainerKorvas);
 
-        totalPrice += products[product.productId]["price"] * product.amount;
+        totalPrice += products[product.productId].price * product.amount;
     });
 
-    // #2
-    ////
-    lopphindElement.innerText = `Lõppuhind: ${totalPrice.toFixed(2)}$`;
+
+    lopphindElement.innerText = `FinalPrice: ${totalPrice.toFixed(2)}$`;
 }
 function kustutaKorvist(productId){
-    korv.forEach((product, index) => {
-        if(product.productId === productId){
-            korv.splice(index, 1);
+    for (let i = 0; i < korv.length; i++) {
+        if (korv[i].productId === productId) {
+            korv.splice(i, 1);
+            break;
         }
-    })
-
+    }
     refreshKorvContainer();
 }
+
+function clearCart() {
+    korv.length = 0;
+    refreshKorvContainer();
+}
+
+
+document.getElementById('clear-cart').addEventListener('click', clearCart);
+
 function ghoulMode(){
     const ul = document.getElementById("ghoul-mode");
     let sum = 1000;
     const minus = 7;
     while(sum > 0){
-        const li=document.createElement('li');
-        li.innerText=sum;
+        sum -= minus;
+
+    }
+}
+function ghoulMode() {
+    const ul = document.getElementById("ghoul-mode");
+    let sum = 1000;
+    const minus = 7;
+
+
+    ul.innerHTML = '';
+
+    // Цикл, пока сумма больше 0
+    while (sum > 0) {
+        const li = document.createElement("li");
+        li.innerText = sum;
         ul.appendChild(li);
         sum -= minus;
     }
 }
-
-ghoulMode();

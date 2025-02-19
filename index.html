@@ -7,34 +7,38 @@
 </head>
 <body>
 <div class="container">
-<div class="header-container">
-    <div class="items-container">
-        <h1>ZXC-Shop</h1>
-        <img src="https://aleksandermilisenko23.thkit.ee/maparea/zxc-cat/zxccat.jpg" id="car-image">
-    </div>
+    <div class="header-container">
+        <div class="items-container">
+            <h1>ZXC-Shop</h1>
+            <img src="https://aleksandermilisenko23.thkit.ee/maparea/zxc-cat/zxccat.jpg" id="car-image">
+        </div>
 
-</div>
+    </div>
     <div class="body-container">
         <div class="products-container" id="products-container">
 
         </div>
         <div class="korv-container">
             <h2>Korv</h2>
+
             <div class="products-korvas-container" id="products-korvas-container">
 
             </div>
 
+            <button id="clear-cart">Tühi korv</button>
+
             <p id="lopphind">Lõppuhind: </p>
+
         </div>
     </div>
-    <div>
-        <ul id="ghoul-mode">
+    <button id="activate-ghoul-mode" onclick="ghoulMode()">Aktiveeri ghoulMode</button>
 
-        </ul>
-    </div>
+    <ul id="ghoul-mode">
+
+    </ul>
+
 </div>
 <script src="index.js"></script>
 </body>
-</html>
 
-<!-- test -->
+</html>
